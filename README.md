@@ -42,7 +42,7 @@ The five tables from these three sources were organized locally to support furth
 
 | Code | Description | Link |
 |------|-------------|------|
-| `data_prep.ipynb` | Loads in the raw csv files, performs transformations to establish relational model, uploads tables to DuckDB, and saves output files | [Link to data prep code](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/data_prep.ipynb)|
+| `data_prep.ipynb` | Loads in the raw data, performs transformations to establish relational model, uploads tables to DuckDB, and saves output files | [Link to data prep code](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/data_prep.ipynb)|
 
 ### Bias Identification
 
@@ -58,7 +58,7 @@ The construction of the S&P 500 relational model required selecting from multipl
 
 Another important design decision involved structuring the relational model, particularly the use of primary keys and temporal alignment across tables. The `Date` variable was chosen as the primary key for the S&P 500 Index table, which also allows it to function as a natural connection point to other time-based tables such as stock prices and constituents. Additional primary keys were created in the S&P 500 ESG Data, S&P 500 Stocks, and S&P 500 Constituents tables to maintain integrity and support efficient joins. These decisions ensured that the dataset adheres to relational modeling principles. However, they also introduce considerations around data alignment, as mismatches in trading days or missing values across tables may affect downstream analysis if not handled carefully.
 
-Finally, the scope and feature selection of the dataset reflect deliberate tradeoffs between completeness and interpretability. The analysis was limited to S&P 500 companies in order to capture a meaningful representation of the broader U.S. stock market. ESG data was incorporated to extend analysis beyond financial performance and include sustainability-related factors, though this introduces additional variability due to scoring methodologies. In data cleaning, features that reflected the current state of a company, such as real-time metrics, were removed from static tables. These decisions were made to create a database that adheres to the rules of the relational model and will be useful for analytics in forecasting stock performance based on a variety of factors.
+Finally, the analysis was limited to S&P 500 companies in order to capture a meaningful representation of the broader U.S. stock market. ESG data was incorporated to extend analysis beyond financial performance and include sustainability-related factors, though this introduces additional variability due to scoring methodologies. In data cleaning, features that reflected the current state of a company, such as real-time metrics, were removed from static tables. These decisions were made to create a database that adheres to the rules of the relational model and will be useful for analytics in forecasting stock performance based on a variety of factors.
 
 ## Metadata
 
