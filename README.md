@@ -21,6 +21,48 @@
 
 ## Domain Exposition
 
+### Terminology
+
+**Table 1.** Domain Terminology
+
+| Term | Description |
+|------|-------------|
+| Asset | Economic value resultin from stock ownership |
+| EBITDA | Earnings Before Interest, Taxes, Depreciation, and Amortization; indicator of company profitability |
+| ESG Score | Performance metric used to assess company sustainability (Evironmental, Social, Governance) |
+| GICS Sector | Framework that categorizes companies into 11 main economic sectors |
+| Large-cap Stocks | Shares of a company with over $10 Billion market cap |
+| Market Cap | Total value of a company's aggregated stock shares |
+| Price | The current value of one share of a stock |
+| Revenue Growth | Percent increase in company's revenue; key indicator of stock performance |
+| S&P 500 | Stock market index tracking performance of the 500 leading US companies |
+| Stocks | Securities representing partial ownership of a publicly traded company |
+| Stock Exchange | Market where stocks are bought and sold | 
+| Stock Market | Trading network that allows investors to buy and sell stocks |
+| Symbol | Unique company abbreviation for stock market identification | 
+| Volatility | Measure of rapidity of price changes for the shares of a company |
+| Volume | Total number of shares traded in a single day during market hours |
+| Weight | Percentage of S&P 500 index comprised by an individual company |
+
+### Domain Description
+
+This project lives in the financial markets domain. It centers around the stock market, which is a system where shares of publicly traded companies are bought and sold, reflecting the collective expectations of investors about future performance. The project focuses specifically on the S&P 500, an index that tracks large-cap U.S. companies and is commonly used as an indicator of overall market performance. Proficiency in this domain requires an understanding of financial metrics, market dynamics, and the factors that influence stock prices, including company fundamentals, economic conditions, and investor behavior. Additionally, this project incorporates ESG data, which captures environmental, social, and governance factors that may influence long-term company performance beyond traditional financial indicators. Lastly, this project involves elements of prediction and modeling, where historical data is used to identify patterns and relationships that may inform future market behavior. Knowledge of how financial systems operate, along with an awareness of their limitations and uncertainties, is essential in order to apply these findings effectively in investment-related decision making.
+
+### Background Reading
+
+**Background Reading**: [Domain Exposition Folder](https://myuva-my.sharepoint.com/:f:/g/personal/cxx6sw_virginia_edu/IgDwP3hVgnHnSZBozs8XP3kGAVH3vmF9mlVqJhP_UJrmWJA?e=CAtYpN)
+
+**Table 2.** Summary of Background Readings
+
+| Title | Description | Link |
+|-------|-------------|------|
+| Stock Market 101 | Outlines the purpose, function, and various aspects about stocks and the stock market | [Stock Market 101](https://myuva-my.sharepoint.com/:u:/g/personal/cxx6sw_virginia_edu/IQDxv4aEnPetTJS2Xi20sDl3AarR_9lwIMgJ1X_gnLhU3cQ?e=bmeB95) |
+| S&P 500 | Describes the scale and significance of the S&P 500 as a Gauge of the U.S. Large-Cap Market | [S&P 500](https://myuva-my.sharepoint.com/:u:/g/personal/cxx6sw_virginia_edu/IQAzC_xXktAhR6WB2I5-Y4qlAVXtiT12rkDRfH3N8nbUyTQ?e=c6QT0K) |
+| S&P 500 Index Stocks List | Displays data about all 503 constituents of the S&P index, ordered by market cap | [S&P 500 Index Stocks List](https://myuva-my.sharepoint.com/:u:/g/personal/cxx6sw_virginia_edu/IQAoeBbE0o4hR5fkrIVAjINfAXsGysJIqoeVQ4EBaAcFO0c?e=sdSJuY) |
+| ESG Scores and Raw Data | Describes ESG scores and approaches for market sustainability | [ESG Scores and Raw Data](https://myuva-my.sharepoint.com/:u:/g/personal/cxx6sw_virginia_edu/IQDNAT_730UsTYusXmbAnlAfAcAfpK96wLu1pveyzGFuiGM?e=eVxjsf) |
+| Stock Market Prediction | Defines stock market prediction and explaines methods and key indicators that reveal market performance | [Stock Market Prediction](https://myuva-my.sharepoint.com/:u:/g/personal/cxx6sw_virginia_edu/IQAoDXwn_ttuRbjK8hEHK8lnAfatEYJfDsEGF0RSuQUCQYU?e=HPgw6R) |
+| How effective is machine learning in stock market predictions? | Study aimed an analyzing prediction algorithm performance for stock market prediction | [How effective is machine learning in stock market predictions?](https://myuva-my.sharepoint.com/:u:/g/personal/cxx6sw_virginia_edu/IQC0XOivUWIjSooMEYl2TAYrAeMedD9fpIjIQDme8c3I_ZE?e=aulZNf) |
+
 
 ## Data Creation
 
@@ -38,7 +80,7 @@ The five tables from these three sources were organized locally to support furth
 
 ### Code
 
-**Table 2.** Code used for Data Creation
+**Table 3.** Code used for Data Creation
 
 | Code | Description | Link |
 |------|-------------|------|
@@ -70,7 +112,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 
 ### Data
 
-**Table 3.** Data Tables
+**Table 4.** Data Tables
 
 | Table | Description | Link |
 |-------|-------------|------|
@@ -82,7 +124,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 
 ### Data Dictionary
 
-**Table 4.** Companies Data Dictionary
+**Table 5.** Companies Data Dictionary
 
 | Name | Data Type | Description | Example | Uncertainty |
 |----|----|----|----|----|
@@ -101,7 +143,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Long Business Summary | String | Information about company | Apple Inc. designs, manufactures, and markets smartphones ... | |
 | Weight | Float | Percentage of S&P 500 Index staked in company | 0.06920915243972749 | Weight ± 1.96 * √(Weight) |
 
-**Table 5.** ESG Data Dictionary
+**Table 6.** ESG Data Dictionary
 
 | Name | Data Type | Description | Example | Uncertainty |
 |----|----|----|----|----|
@@ -122,7 +164,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Beta | Float | Measure of stock volatility relative to overall market | 1.240 | Mean ± 95% CI (based on standard error) |
 | Overall Risk | Int | Composite risk score derived from ESG factors | 1 | Mean ± 95% CI (based on standard error) |
 
-**Table 6.** Stocks Data Dictionary
+**Table 7.** Stocks Data Dictionary
 
 | Name | Data Type | Description | Example | Uncertainty |
 |----|----|----|----|----|
@@ -136,7 +178,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Open | Float | Opening trading price of stock at market open | 64.91000366210938 | Mean ± 95% CI (based on standard error) |
 | Volume | Int | Number of shares traded during the day | 4045500 | Mean ± 95% CI (based on standard error) |
 
-**Table 7.** S&P 500 Index Data Dictionary
+**Table 8.** S&P 500 Index Data Dictionary
 
 | Name | Data Type | Description | Example | Uncertainty |
 |----|----|----|----|----|
@@ -147,7 +189,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Close | Float | Final value of the S&P 500 index at market close | 2862.9599609375 | Mean ± 95% CI (based on standard error) |
 | Volume | Int | Total trading volume of all index constituents during the day | 3174010000 | Mean ± 95% CI (based on standard error) |
 
-**Table 8.** Constituents Data Dictionary
+**Table 9.** Constituents Data Dictionary
 
 | Name | Data Type | Description | Example | Uncertainty |
 |----|----|----|----|----|
