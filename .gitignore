@@ -5,3 +5,11 @@ data/*
 # Ignore virtual environment
 .venv
 .venv/*
+
+# Ignore log files
+logs
+logs/*
+
+# Ignore Duckdb
+*.duckdb
+*.db
