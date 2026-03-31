@@ -11,7 +11,7 @@
 | DOI | [DOI Link]() |
 | Press Release | [Headline]() |
 | Data | [OneDrive Data Folder](https://myuva-my.sharepoint.com/:f:/r/personal/cxx6sw_virginia_edu/Documents/DS%204320%20Project%201/Data?csf=1&web=1&e=xrsKd2) |
-| Pipeline | [Pipeline Files]() |
+| Pipeline | **Pipeline Files** <br> 1. [Data Prep](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/data_prep.ipynb) <br> 2. [Data Analysis](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/data_analysis.ipynb) |
 | License | [License]() |
 
 ---
