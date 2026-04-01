@@ -195,7 +195,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | High | Float | Highest trading price of stock during the day | 65.06999969482422 | High ± (1.96 * √(High)) / 10 |
 | Low | Float | Lowest trading price of stock during the day | 64.5 | Low ± (1.96 * √(Low)) / 10 |
 | Open | Float | Opening trading price of stock at market open | 64.91000366210938 | Open ± (1.96 * √(Open)) / 10 |
-| Volume | Int | Number of shares traded during the day | 4045500 | Volume ± 1.96 * √(Volume) |
+| Volume | Int | Number of shares traded during the day | 4045500 | Volume ± round(1.96 * √(Volume)) |
 
 **Table 8.** S&P 500 Index Data Dictionary
 
@@ -206,7 +206,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | High | Float | Highest value of the S&P 500 index during the trading day | 2873.22998046875 | High ± (1.96 * √(High)) / 10 |
 | Low | Float | Lowest value of the S&P 500 index during the trading day | 2861.320068359375 | Low ± (1.96 * √(Low)) / 10 |
 | Close | Float | Final value of the S&P 500 index at market close | 2862.9599609375 | Close ± (1.96 * √(Close)) / 10 |
-| Volume | Int | Total trading volume of all index constituents during the day | 3174010000 | Volume ± 1.96 * √(Volume) |
+| Volume | Int | Total trading volume of all index constituents during the day | 3174010000 | Volume ± round(1.96 * √(Volume)) |
 
 **Table 9.** Constituents Data Dictionary
 
