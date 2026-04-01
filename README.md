@@ -154,7 +154,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Sector | String | Economic segment of company | Technology | |
 | Industry | String | Specific category within sector | Consumer Electrics | |
 | EDITDA | Float | Earnings before interest, taxes, depreciation, and amortization | 134660997120 | EDITDA ± 1.96 * √(EDITDA) |
-| Revenue Growth | Float | Percent increase in company sales | 0.061 | Revenue Growth ± 1.96 * √(Revent Growth) |
+| Revenue Growth | Float | Percent increase in company sales | 0.061 | Revenue Growth ± 1.96 * √(|Revenue Growth|) |
 | City | String | City where company operations are headquartered | Cupertino | |
 | State | String | State where company operations are headquartered | CA | |
 | Country | String | Country where company operations are headquartered | United States | |
@@ -171,17 +171,17 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Full Name | String | Full name of company associated with ESG data | Apple Inc. | |
 | GICS Sector | String | Economic sector classification based on Global Industry Classification Standard | Information Technology | |
 | GICS Sub-Industry | String | More specific classification within GICS sector | Technology Hardware, Storage & Peripherals | |
-| Environment Score | Float | Score measuring company environmental impact and sustainability practices | 0.46 | Mean ± 95% CI (based on standard error) |
-| Social Score | Float | Score measuring company relationships with employees, customers, and communities | 7.39 | Mean ± 95% CI (based on standard error) |
-| Governance Score | Float | Score measuring company leadership, audits, and shareholder rights | 9.37 | Mean ± 95% CI (based on standard error) |
-| Total ESG | Float | Aggregate ESG score combining environmental, social, and governance factors | 17.22 | Mean ± 95% CI (based on standard error) |
-| Highest Controversy | Int | Indicator of most severe ESG-related controversy involving the company | 3 | Proportion ± standard error |
-| Percentile | Float | Percentile ranking of company ESG score relative to peers | 17.82 | Mean ± 95% CI (based on standard error) |
+| Environment Score | Float | Score measuring company environmental impact and sustainability practices | 0.46 | Environment Score ± 1.96 * √(Environment Score) |
+| Social Score | Float | Score measuring company relationships with employees, customers, and communities | 7.39 | Social Score ± 1.96 * √(Social Score) |
+| Governance Score | Float | Score measuring company leadership, audits, and shareholder rights | 9.37 | Governance Score ± 1.96 * √(Governance Score) |
+| Total ESG | Float | Aggregate ESG score combining environmental, social, and governance factors | 17.22 | Total ESG ± 1.96 * √(Total ESG) |
+| Highest Controversy | Int | Indicator of most severe ESG-related controversy involving the company | 3 | Highest Controversy ± 1 |
+| Percentile | Float | Percentile ranking of company ESG score relative to peers | 17.82 | Percentile ± RANK(1.96 * √(Percentile)) |
 | Rating Year | Int | Year ESG rating was assigned | 2023 | |
 | Rating Month | Int | Month ESG rating was assigned | 9 | |
-| Market Cap | Float | Total market value of company's outstanding shares | 3296096681984 | Mean ± 95% CI (based on standard error) |
-| Beta | Float | Measure of stock volatility relative to overall market | 1.240 | Mean ± 95% CI (based on standard error) |
-| Overall Risk | Int | Composite risk score derived from ESG factors | 1 | Mean ± 95% CI (based on standard error) |
+| Market Cap | Float | Total market value of company's outstanding shares | 3296096681984 | Market Cap ± round(1.96 * √(Market Cap)) |
+| Beta | Float | Measure of stock volatility relative to overall market | 1.240 | Beta ± 1.96 * √(Beta) |
+| Overall Risk | Int | Composite risk score derived from ESG factors | 1 | |Overall Risk ± 2| |
 
 **Table 7.** Stocks Data Dictionary
 
@@ -190,23 +190,23 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Ticker ID | Int | Unique identifier for stock price record | 1009709 | |
 | Date | Date | Trading date for stock price data | 2018-08-21 | |
 | Symbol | String | Company ticker symbol as seen on stock exchange | ABT | |
-| Adjusted Close | Float | Closing price adjusted for dividends and stock splits | 58.136356353759766 | Mean ± 95% CI (based on standard error) |
-| Close | Float | Final trading price of stock at market close | 64.75  | Mean ± 95% CI (based on standard error) |
-| High | Float | Highest trading price of stock during the day | 65.06999969482422 | Mean ± 95% CI (based on standard error) |
-| Low | Float | Lowest trading price of stock during the day | 64.5 | Mean ± 95% CI (based on standard error) |
-| Open | Float | Opening trading price of stock at market open | 64.91000366210938 | Mean ± 95% CI (based on standard error) |
-| Volume | Int | Number of shares traded during the day | 4045500 | Mean ± 95% CI (based on standard error) |
+| Adjusted Close | Float | Closing price adjusted for dividends and stock splits | 58.136356353759766 | Adjusted Close ± (1.96 * √(Adjusted Close)) / 10 |
+| Close | Float | Final trading price of stock at market close | 64.75  | Close ± (1.96 * √(Close)) / 10 |
+| High | Float | Highest trading price of stock during the day | 65.06999969482422 | High ± (1.96 * √(High)) / 10 |
+| Low | Float | Lowest trading price of stock during the day | 64.5 | Low ± (1.96 * √(Low)) / 10 |
+| Open | Float | Opening trading price of stock at market open | 64.91000366210938 | Open ± (1.96 * √(Open)) / 10 |
+| Volume | Int | Number of shares traded during the day | 4045500 | Volume ± 1.96 * √(Volume) |
 
 **Table 8.** S&P 500 Index Data Dictionary
 
 | Name | Data Type | Description | Example | Uncertainty |
 |----|----|----|----|----|
 | Date | Date | Trading date for S&P 500 index data | 2018-08-21 | |
-| Open | Float | Opening value of the S&P 500 index at market open | 2861.510009765625 | Mean ± 95% CI (based on standard error) |
-| High | Float | Highest value of the S&P 500 index during the trading day | 2873.22998046875 | Mean ± 95% CI (based on standard error) |
-| Low | Float | Lowest value of the S&P 500 index during the trading day | 2861.320068359375 | Mean ± 95% CI (based on standard error) |
-| Close | Float | Final value of the S&P 500 index at market close | 2862.9599609375 | Mean ± 95% CI (based on standard error) |
-| Volume | Int | Total trading volume of all index constituents during the day | 3174010000 | Mean ± 95% CI (based on standard error) |
+| Open | Float | Opening value of the S&P 500 index at market open | 2861.510009765625 | Open ± (1.96 * √(Open)) / 10 |
+| High | Float | Highest value of the S&P 500 index during the trading day | 2873.22998046875 | High ± (1.96 * √(High)) / 10 |
+| Low | Float | Lowest value of the S&P 500 index during the trading day | 2861.320068359375 | Low ± (1.96 * √(Low)) / 10 |
+| Close | Float | Final value of the S&P 500 index at market close | 2862.9599609375 | Close ± (1.96 * √(Close)) / 10 |
+| Volume | Int | Total trading volume of all index constituents during the day | 3174010000 | Volume ± 1.96 * √(Volume) |
 
 **Table 9.** Constituents Data Dictionary
 
