@@ -135,11 +135,11 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 
 | Table | Description | Link |
 |-------|-------------|------|
-| Companies | Information about S&P 500 companies | [Link to sp500_companies.csv](https://myuva-my.sharepoint.com/:x:/r/personal/cxx6sw_virginia_edu/Documents/DS%204320%20Project%201/Data/csv/sp500_companies.csv?d=w018aa33171a64dafbb973df86d6e91a2&csf=1&web=1&e=gq4rqD) |
-| ESG Data | ESG sustainability scores for S&P 500 companies | [Link to sp500_esg.csv](https://myuva-my.sharepoint.com/:x:/r/personal/cxx6sw_virginia_edu/Documents/DS%204320%20Project%201/Data/csv/sp500_esg.csv?d=w262ccc38a5e64f2f83ea3774310c3497&csf=1&web=1&e=Cd2t6G) |
-| Stocks | Daily records (2014-2024) for S&P 500 companies | [Link to sp500_stocks.csv](https://myuva-my.sharepoint.com/:x:/r/personal/cxx6sw_virginia_edu/Documents/DS%204320%20Project%201/Data/csv/sp500_stocks.csv?d=w248e8eecd649454cbd0b90311f28ef51&csf=1&web=1&e=q2Whc7) |
-| S&P Index | Daily record (1927-2026) of S&P 500 index | [Link to sp500_index.csv](https://myuva-my.sharepoint.com/:x:/r/personal/cxx6sw_virginia_edu/Documents/DS%204320%20Project%201/Data/csv/sp500_index.csv?d=w8bc98b055a494b8db279e87d73fda3e2&csf=1&web=1&e=hsryck) |
-| Constituents | Additional information about S&P 500 companies | [Link to sp500_constituents.csv](https://myuva-my.sharepoint.com/:x:/r/personal/cxx6sw_virginia_edu/Documents/DS%204320%20Project%201/Data/csv/sp500_constituents.csv?d=w62325a5e97b748c08e2a6f08e0217165&csf=1&web=1&e=giOnBK) |
+| Companies | Information about S&P 500 companies | [Link to sp500_companies.csv](https://myuva-my.sharepoint.com/:x:/g/personal/cxx6sw_virginia_edu/IQAxo4oBpnGvTbuXPfhtbpGiAZjAwq37sBVpMexZXSlX2nQ?e=Bmp4Mp) |
+| ESG Data | ESG sustainability scores for S&P 500 companies | [Link to sp500_esg.csv](https://myuva-my.sharepoint.com/:x:/g/personal/cxx6sw_virginia_edu/IQA4zCwm5qUvT4PqN3QxDDSXAT05b4eHgA3hcZzXA7hU12A?e=FfFzHD) |
+| Stocks | Daily records (2014-2024) for S&P 500 companies | [Link to sp500_stocks.csv](https://myuva-my.sharepoint.com/:x:/g/personal/cxx6sw_virginia_edu/IQDsjo4kSdZMRb0LkDEfKO9RAXWofy66K9bEc97_FZcAoMo?e=8eh00s) |
+| S&P Index | Daily record (1927-2026) of S&P 500 index | [Link to sp500_index.csv](https://myuva-my.sharepoint.com/:x:/g/personal/cxx6sw_virginia_edu/IQAFi8mLSVqNS7J56H1z_aPiAUgcLKNc3mdnxlUMCs4E0no?e=Wv3gRh) |
+| Constituents | Additional information about S&P 500 companies | [Link to sp500_constituents.csv](https://myuva-my.sharepoint.com/:x:/g/personal/cxx6sw_virginia_edu/IQBeWjJit5fASI4qbwjgIXFlAU3_8bWt4lkv9frQd1w_2-k?e=TWkXUH) |
 
 ### Data Dictionary
 
@@ -154,7 +154,7 @@ Finally, the analysis was limited to S&P 500 companies in order to capture a mea
 | Sector | String | Economic segment of company | Technology | |
 | Industry | String | Specific category within sector | Consumer Electrics | |
 | EDITDA | Float | Earnings before interest, taxes, depreciation, and amortization | 134660997120 | EDITDA ± 1.96 * √(EDITDA) |
-| Revenue Growth | Float | Percent increase in company sales | 0.061 | Revenue Growth ± 1.96 * √(|Revenue Growth|) |
+| Revenue Growth | Float | Percent increase in company sales | 0.061 | Revenue Growth ± 1.96 * √+(Revenue Growth) |
 | City | String | City where company operations are headquartered | Cupertino | |
 | State | String | State where company operations are headquartered | CA | |
 | Country | String | Country where company operations are headquartered | United States | |
