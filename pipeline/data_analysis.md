@@ -19,7 +19,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 # Setup logger
 
 logging.basicConfig(
-    filename='./logs/data_analysis.log',
+    filename='../logs/data_analysis.log',
     level=logging.INFO, 
     format='%(asctime)s - %(levelname)s - %(message)s',
     filemode='w'
@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 try:
     
     # Establish DuckDB connection
-    con = duckdb.connect(database='./sp500.duckdb', read_only=False)
+    con = duckdb.connect(database='../sp500.duckdb', read_only=False)
     logger.info("Connected to DuckDB instance")
 
     # Query the sp500 Database
@@ -840,7 +840,7 @@ plt.barh(top_features['Feature'], top_features['Importance'], color="darkorange"
 plt.xlabel("Coefficient")
 plt.title("Feature Importance - Random Forest")
 plt.tight_layout()
-plt.savefig("./graphics/feature_importance.png")
+plt.savefig("../graphics/feature_importance.png")
 plt.show()
 
 ```
@@ -873,7 +873,7 @@ plt.plot(company_table["totalEsg"], p(company_table["totalEsg"]), color="Red", l
 plt.xlabel("Total ESG Score")
 plt.ylabel("Average Daily Return")
 plt.title("ESG Score vs Stock Performance")
-plt.savefig("./graphics/esg_performance.png")
+plt.savefig("../graphics/esg_performance.png")
 plt.show()
 
 logger.info("Visualize ESG scores vs performance")
@@ -915,7 +915,7 @@ plt.gca().spines['right'].set_visible(False)
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=12)
 plt.tight_layout()
-plt.savefig("./graphics/sector_performance.png")
+plt.savefig("../graphics/sector_performance.png")
 plt.show()
 
 logger.info("Visualize performance by sector")
@@ -936,7 +936,7 @@ plt.hist(company_table["avg_daily_return"], bins=30)
 plt.title("Distribution of Average Returns")
 plt.xlabel("Average Return")
 plt.ylabel("Frequency")
-plt.savefig("./graphics/average_returns.png")
+plt.savefig("../graphics/average_returns.png")
 plt.show()
 
 logger.info("Visualize distribution of returns")
@@ -957,7 +957,7 @@ plt.hist(company_table["totalEsg"], bins=30)
 plt.title("Distribution of ESG Scores")
 plt.xlabel("ESG Score")
 plt.ylabel("Frequency")
-plt.savefig("./graphics/esg_distribution.png")
+plt.savefig("../graphics/esg_distribution.png")
 plt.show()
 
 logger.info("Visualize distribution of ESG scores")
@@ -976,7 +976,7 @@ logger.info("Visualize distribution of ESG scores")
 plt.figure(figsize=(10, 8))
 sns.heatmap(company_table.corr(numeric_only=True), annot=False)
 plt.title("Correlation Matrix")
-plt.savefig("./graphics/feature_heatmap.png")
+plt.savefig("../graphics/feature_heatmap.png")
 plt.show()
 
 logger.info("Plot heatmap of features")
@@ -997,7 +997,7 @@ plt.scatter(company_table["price_volatility"], company_table["avg_daily_return"]
 plt.xlabel("Volatility")
 plt.ylabel("Average Return")
 plt.title("Risk vs Return")
-plt.savefig("./graphics/risk_return.png")
+plt.savefig("../graphics/risk_return.png")
 plt.show()
 
 logger.info("Visualize risk vs return")

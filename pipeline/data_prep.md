@@ -13,7 +13,7 @@ import logging
 # Setup logger
 
 logging.basicConfig(
-    filename='./logs/data_prep.log',
+    filename='../logs/data_prep.log',
     level=logging.INFO, 
     format='%(asctime)s - %(levelname)s - %(message)s',
     filemode='w'
@@ -24,11 +24,11 @@ logger = logging.getLogger(__name__)
 
 ```python
 # Load data
-companies = pd.read_csv("./data/source/sp500_companies.csv")
-esg = pd.read_csv("./data/source/sp500_esg_data.csv")
-index = pd.read_csv("./data/source/sap500.csv")
-stocks = pd.read_csv("./data/source/sp500_stocks.csv")
-constituents = pd.read_csv("./data/source/sp500_constituents.csv")
+companies = pd.read_csv("../data/source/sp500_companies.csv")
+esg = pd.read_csv("../data/source/sp500_esg_data.csv")
+index = pd.read_csv("../data/source/sap500.csv")
+stocks = pd.read_csv("../data/source/sp500_stocks.csv")
+constituents = pd.read_csv("../data/source/sp500_constituents.csv")
 
 logger.info("Loaded raw data")
 ```
@@ -79,7 +79,7 @@ logger.info("Set primary keys as first column")
 try:
 
     # Establish DuckDB connection
-    con = duckdb.connect(database='./sp500.duckdb', read_only=False)
+    con = duckdb.connect(database='../sp500.duckdb', read_only=False)
     logger.info("Connected to DuckDB instance")
 
     # Add tables to database
@@ -123,11 +123,11 @@ except Exception as e:
 ```python
 # Save files to csv
 
-companies.to_csv('./data/csv_out/sp500_companies.csv', index=False)
-esg.to_csv('./data/csv_out/sp500_esg.csv', index=False)
-index.to_csv('./data/csv_out/sp500_index.csv', index=False)
-stocks.to_csv('./data/csv_out/sp500_stocks.csv', index=False)
-constituents.to_csv('./data/csv_out/sp500_constituents.csv', index=False)
+companies.to_csv('../data/csv_out/sp500_companies.csv', index=False)
+esg.to_csv('../data/csv_out/sp500_esg.csv', index=False)
+index.to_csv('../data/csv_out/sp500_index.csv', index=False)
+stocks.to_csv('../data/csv_out/sp500_stocks.csv', index=False)
+constituents.to_csv('../data/csv_out/sp500_constituents.csv', index=False)
 
 logger.info("Save tables as csv files")
 ```
@@ -136,11 +136,11 @@ logger.info("Save tables as csv files")
 ```python
 # Save files to parquet
 
-companies.to_parquet('./data/parquet_out/sp500_companies.parquet')
-esg.to_parquet('./data/parquet_out/sp500_esg.parquet')
-index.to_parquet('./data/parquet_out/sp500_index.parquet')
-stocks.to_parquet('./data/parquet_out/sp500_stocks.parquet')
-constituents.to_parquet('./data/parquet_out/sp500_constituents.parquet')
+companies.to_parquet('../data/parquet_out/sp500_companies.parquet')
+esg.to_parquet('../data/parquet_out/sp500_esg.parquet')
+index.to_parquet('../data/parquet_out/sp500_index.parquet')
+stocks.to_parquet('../data/parquet_out/sp500_stocks.parquet')
+constituents.to_parquet('../data/parquet_out/sp500_constituents.parquet')
 
 logger.info("Save tables as parquet files")
 ```
