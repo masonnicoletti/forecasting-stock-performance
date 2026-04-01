@@ -1,6 +1,8 @@
-# DS 4320 Project 1: Forecasting Stock Performance
+# DS 4320 Project 1: Analyzing Stock Performance
 
 ## Executive Summary
+
+The contents of this repository aim to explore stock performance across S&P 500 companies. This project started by integrating tables from various sources of data about S&P 500 constituents, historical pricing data, company characteristics, ESG metrics, and S&P 500 index performance into a structured relational database. The analysis focuses on evaluating differences in average daily returns across companies based on various features. Using data preprocessing, SQL querying and DuckDB, and Random Forest machine learning, the project identifies key factors associated with stock performance. Visualizations are included in the graphics folder, and a press release was composed to communicate insights to investors. Overall, this repository outlines a framework for analyzing the performance of S&P 500 stocks, and it offers the potential to continuously update and scale the database and conduct further analysis.
 
 ---
 
@@ -18,6 +20,23 @@
 
 ## Problem Definition
 
+### Problem Statement
+
+**General Problem:** Forecasting stock prices
+
+**Specific Problem:** Analyzing trends and differences in stock performance across S&P 500 companies based on historical pricing, company characteristics, and ESG scores.
+
+### Rationale
+
+The original problem of forecasting stock prices was refined to better align with the structure of the data and the type of analysis being conducted. Stock price prediction requires strong time-series data, which was not acquired for this dataset. Instead, the refined problem focuses on evaluating trends and differences in stock performance across S&P 500 companies using historical data. This reframing allows for a clearer definition of the factors included in the analysis, specifically three categories of data: 1) historical pricing data, summarized into metrics such as average daily return and volatility, 2) company characteristics, and 3) ESG scores, representing environmental, social, and governance factors. By shifting the focus to explanation from prediction, the analysis is able to more effectively identify relationships between these variables and stock performance. This also establishes a more appropriate target variable for meaningful comparison across companies without assuming things about future market conditions.
+
+### Motivation
+
+Despite the vast amount of financial data available, it remains difficult for investors to clearly understand what drives stock performance. This challenge is further complicated by the growing importance of non-financial factors, such as ESG scores and company politics, which are increasingly shaping investment strategies. The motivation for this project is rooted in providing a more structured and accessible way to analyze stock performance by combining financial data, company attributes, and sustainability metrics. By identifying the key factors associated with higher or lower returns across S&P 500 companies, this analysis aims to offer insights that can support more informed investment decisions. Additionally, understanding how ESG factors relate to performance may help investors balance financial goals while also considering sustainability and risk.
+
+### Press Release
+
+[Investor Insights - Stock Performance by Industry](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/press_release.md)
 
 ## Domain Exposition
 
