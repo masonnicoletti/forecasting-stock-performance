@@ -9,7 +9,7 @@
 | Name | Mason Nicoletti |
 | NetID | cxx6sw |
 | DOI | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19343949.svg)](https://doi.org/10.5281/zenodo.19343949) |
-| Press Release | [Headline]() |
+| Press Release | [Headline](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/press_release.md) |
 | Data | [OneDrive Data Folder](https://myuva-my.sharepoint.com/:f:/g/personal/cxx6sw_virginia_edu/IgDYx1fsWe9ERbTOqEWXDnzSAVI8Miv0-l0skVUzWQmi-Vk?e=LVSwOI) |
 | Pipeline | **Pipeline Files** <br> 1. [Data Prep](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/data_prep.ipynb) <br> 2. [Data Analysis](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/data_analysis.ipynb) |
 | License | [MIT License](https://github.com/masonnicoletti/forecasting-stock-performance/blob/main/LICENSE) |
